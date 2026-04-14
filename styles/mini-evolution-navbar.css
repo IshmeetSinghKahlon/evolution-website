@@ -1,0 +1,77 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  z-index: 15;
+
+  padding: 1px 1px 1px 1px;
+}
+
+
+.nav-bar::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, black 0%, rgb(10, 0, 50) 45%, black);
+  opacity: 0; 
+  z-index: 100;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-bar.scrolled::before {
+  opacity: 1;
+  z-index: -1;
+}
+
+
+.main-logo-image {
+  height: auto;
+  width: 8%;
+  margin-left: 3%;
+  margin-top: -1%;
+}
+
+.page-title {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background: none;
+  border-width: 0px;
+  color: rgb(182, 182, 182);
+  font-family: 'Playfair', serif;
+  font-size: clamp(15px, 1.8vw, 60px);
+  letter-spacing: clamp(2px, 3vw, 80px);
+  z-index: 100;
+}
+
+.about-me-image {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  padding: 0px;
+  width: 10%;
+}
+
+.about-me-image-button {
+  background-color: transparent;
+  border: none;
+  width: 10%;
+}
+
+.main-logo-image,
+.about-me-image-button,
+.page-title{
+  cursor: pointer;
+}

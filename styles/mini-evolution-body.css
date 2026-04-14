@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  background-color: rgb(202, 202, 202);
+  
+}
+
+.main-image-class {
+  position: relative;
+  
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+}
+
+
+.evolution-title-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.history-subunit-grid-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5%;
+  align-items: stretch;
+}
+
+.timestamp-one {
+  align-items: center;
+
+  width: fit-content;
+  height: 50%;
+  margin-top: 0%;
+  margin-left: 2%;
+
+  font-size: 350%;
+  font-family: 'Playfair', sans-serif;
+  color: rgb(35, 35, 35);
+  background-color: transparent;
+  border: none;
+  z-index: 10;
+
+  text-decoration: underline;
+}
+
+.history-image-one {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  object-fit: cover;
+}
+
+.brief-description-and-timestamp-one{
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin-top: 0px;
+  width: fit-content;
+  padding: 20px;
+
+}
+
+.brief-description-one{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  color: rgb(60, 60, 60);
+}
+
+.line-up, .line-down, .line-left, .line-right{
+  position: absolute;
+  background: black;
+
+  transition: transform 0.8s ease-in-out;
+  pointer-events: none;
+  z-index: 15;
+
+}
+
+.line-up{
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform:  scaleX(0);
+  width: 70%;
+  height: 1px;
+}
+
+.line-left{
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  transform:  scaleY(0);
+  width: 1px;
+  height: 100%;
+}
+
+.line-right{
+  bottom: 0;
+  left: 70%;
+  top: unset;
+  transform-origin: bottom;
+  transform:  scaleY(0);
+  width: 1px;
+  height: 100%;
+}
+
+.line-down{
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform:  scaleX(0);
+  width: 70%;
+  height: 1px;
+}
+
+
+.line-up.active,
+.line-down.active{
+  transform: scaleX(1);
+}
+
+.line-left.active,
+.line-right.active{
+  transform: scaleY(1);
+}
+
+.after-darwin-paragraph {
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  margin-top: 5%;
+}
+
+.aftermath-p {
+  vertical-align: center;
+  justify-self: center;
+  margin-top: 5%;
+  font-weight: bold;
+  font-family: 'Playfair', sans-serif;
+  font-size: 300%;
+}
+
+.background-color{
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: rgb(206, 206, 174);
+  z-index: 0;
+}
